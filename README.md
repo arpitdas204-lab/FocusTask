@@ -9,6 +9,14 @@ FocusTask is an Android task management application built with Java and Android 
 - Display tasks in an organized list
 - Simple and user-friendly interface
 - Task-focused design for everyday productivity
+- ## Screenshots
+
+### Main Screen
+![FocusTask] [Main page] (Screenshot 2026-08-14 115924.png)
+
+### Add Task
+![Add Task](Screenshot_20260817_023102.png)
+
 
 ## Tech Stack
 
