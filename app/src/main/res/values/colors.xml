@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Main screen -->
+    <color name="background_color">#F8F6FC</color>
+    <color name="primary_text">#2D2638</color>
+    <color name="secondary_text">#75697F</color>
+
+    <!-- Dashboard -->
+    <color name="total_text">#5E3A8C</color>
+    <color name="total_background">#E8DFF5</color>
+
+    <color name="completed_text">#2E7D32</color>
+    <color name="completed_background">#E8F5E9</color>
+
+    <color name="active_text">#1565C0</color>
+    <color name="active_background">#E3F2FD</color>
+
+    <color name="done_text">#EF6C00</color>
+    <color name="done_background">#FFF3E0</color>
+
+    <color name="high_text">#C62828</color>
+    <color name="high_background">#FFEBEE</color>
+
+    <!-- Task item -->
+    <color name="task_text">#1F1B24</color>
+    <color name="task_secondary_text">#5E4A6E</color>
+
+    <color name="task_button_background">#E8DFF5</color>
+    <color name="task_button_text">#4A2675</color>
+
+    <!-- Task card -->
+    <color name="task_card_background">#FFFFFF</color>
+
 </resources>

@@ -16,13 +16,32 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
+        <!-- Task Name -->
+
         <CheckBox
             android:id="@+id/cbTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Task"
             android:textSize="16sp"
-            android:textColor="#2D2638" />
+            android:textStyle="bold"
+            android:textColor="@color/task_text"
+            android:buttonTint="@color/task_text" />
+
+        <!-- Task Description -->
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="2dp"
+            android:text="Task description"
+            android:textSize="13sp"
+            android:textColor="@color/task_secondary_text"
+            android:visibility="gone" />
+
+        <!-- Priority -->
 
         <TextView
             android:id="@+id/tvPriority"
@@ -32,9 +51,35 @@
             android:text="Priority: Medium"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:textColor="#6D4C9F" />
+            android:textColor="@color/task_secondary_text" />
+
+        <!-- Deadline -->
+
+        <TextView
+            android:id="@+id/tvDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="4dp"
+            android:text="Deadline: No deadline"
+            android:textSize="12sp"
+            android:textColor="@color/task_secondary_text" />
 
     </LinearLayout>
+
+    <!-- Edit -->
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:backgroundTint="@color/task_button_background"
+        android:textColor="@color/task_button_text" />
+
+    <!-- Delete -->
 
     <Button
         android:id="@+id/btnDelete"
@@ -43,7 +88,7 @@
         android:text="Delete"
         android:textSize="12sp"
         android:textAllCaps="true"
-        android:backgroundTint="#E8DFF5"
-        android:textColor="#5E3A8C" />
+        android:backgroundTint="@color/task_button_background"
+        android:textColor="@color/task_button_text" />
 
 </LinearLayout>
