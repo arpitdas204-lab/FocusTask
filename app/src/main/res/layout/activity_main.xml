@@ -1,255 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingStart="24dp"
-    android:paddingEnd="24dp"
-    android:paddingTop="35dp"
-    android:paddingBottom="24dp"
+    android:fillViewport="true"
     android:background="@color/background_color">
-
-    <!-- App Title -->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FocusTask"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/primary_text"
-        android:gravity="center"
-        android:layout_marginBottom="4dp" />
-
-    <!-- Subtitle -->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Stay focused. Get things done."
-        android:textSize="14sp"
-        android:textColor="@color/secondary_text"
-        android:gravity="center"
-        android:layout_marginBottom="12dp" />
-
-    <!-- Dark Mode -->
-
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/switchTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dark Mode"
-        android:textSize="14sp"
-        android:textColor="@color/primary_text"
-        android:layout_gravity="center"
-        android:layout_marginBottom="12dp" />
-
-    <!-- Task Input -->
-
-    <EditText
-        android:id="@+id/etTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your task"
-        android:textColor="@color/primary_text"
-        android:textColorHint="@color/secondary_text"
-        android:padding="12dp"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Task Description -->
-
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Task description (optional)"
-        android:textColor="@color/primary_text"
-        android:textColorHint="@color/secondary_text"
-        android:inputType="textMultiLine"
-        android:minLines="2"
-        android:maxLines="4"
-        android:gravity="top"
-        android:padding="12dp"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Priority Spinner -->
-
-    <Spinner
-        android:id="@+id/spinnerPriority"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Add Task Button -->
-
-    <Button
-        android:id="@+id/btnAddTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add Task"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#6A4C93"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Dashboard Title -->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Task Status"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/primary_text"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Dashboard / Task Status -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="12dp">
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="35dp"
+        android:paddingBottom="24dp">
 
-        <!-- First Row -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <TextView
-                android:id="@+id/tvTotalTasks"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="6dp"
-                android:gravity="center"
-                android:text="Total: 0"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:singleLine="true"
-                android:padding="12dp"
-                android:textColor="@color/total_text"
-                android:background="@color/total_background" />
-
-            <TextView
-                android:id="@+id/tvCompletedTasks"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="6dp"
-                android:gravity="center"
-                android:text="Completed: 0"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:singleLine="true"
-                android:padding="12dp"
-                android:textColor="@color/completed_text"
-                android:background="@color/completed_background" />
-
-        </LinearLayout>
-
-        <!-- Second Row -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginTop="8dp">
-
-            <TextView
-                android:id="@+id/tvActiveTasks"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="6dp"
-                android:gravity="center"
-                android:text="Active: 0"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:singleLine="true"
-                android:padding="12dp"
-                android:textColor="@color/active_text"
-                android:background="@color/active_background" />
-
-            <TextView
-                android:id="@+id/tvCompletionRate"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="6dp"
-                android:gravity="center"
-                android:text="Done: 0%"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:singleLine="true"
-                android:padding="12dp"
-                android:textColor="@color/done_text"
-                android:background="@color/done_background" />
-
-        </LinearLayout>
-
-        <!-- High Priority -->
+        <!-- App Title -->
 
         <TextView
-            android:id="@+id/tvHighPriority"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="High Priority: 0"
-            android:textSize="13sp"
+            android:text="FocusTask"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Subtitle -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stay focused. Get things done."
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Dark Mode -->
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Task Input -->
+
+        <EditText
+            android:id="@+id/etTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your task"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text"
             android:padding="12dp"
-            android:textColor="@color/high_text"
-            android:background="@color/high_background" />
+            android:layout_marginBottom="8dp" />
 
-    </LinearLayout>
+        <!-- Task Description -->
 
-    <!-- Filter -->
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task description (optional)"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:maxLines="4"
+            android:gravity="top"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
 
-    <Spinner
-        android:id="@+id/spinnerFilter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp" />
+        <!-- Priority Spinner -->
 
-    <!-- Task Heading -->
+        <Spinner
+            android:id="@+id/spinnerPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your Tasks"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/primary_text"
-        android:layout_marginTop="4dp" />
+        <!-- Add Task Button -->
 
-    <!-- Task Count -->
+        <Button
+            android:id="@+id/btnAddTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Task"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6A4C93"
+            android:layout_marginBottom="16dp" />
 
-    <TextView
-        android:id="@+id/tvTaskCount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tasks: 0"
-        android:textSize="13sp"
-        android:textColor="@color/secondary_text"
-        android:layout_marginBottom="8dp" />
+        <!-- Dashboard Title -->
 
-    <!-- Task List -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task Status"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:layout_marginBottom="8dp" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true">
+        <!-- Dashboard / Task Status -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <!-- First Row -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvTotalTasks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:text="Total: 0"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:padding="12dp"
+                    android:textColor="@color/total_text"
+                    android:background="@color/total_background" />
+
+                <TextView
+                    android:id="@+id/tvCompletedTasks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:gravity="center"
+                    android:text="Completed: 0"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:padding="12dp"
+                    android:textColor="@color/completed_text"
+                    android:background="@color/completed_background" />
+
+            </LinearLayout>
+
+            <!-- Second Row -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tvActiveTasks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:text="Active: 0"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:padding="12dp"
+                    android:textColor="@color/active_text"
+                    android:background="@color/active_background" />
+
+                <TextView
+                    android:id="@+id/tvCompletionRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:gravity="center"
+                    android:text="Done: 0%"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:padding="12dp"
+                    android:textColor="@color/done_text"
+                    android:background="@color/done_background" />
+
+            </LinearLayout>
+
+            <!-- High Priority -->
+
+            <TextView
+                android:id="@+id/tvHighPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="High Priority: 0"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:padding="12dp"
+                android:textColor="@color/high_text"
+                android:background="@color/high_background" />
+
+        </LinearLayout>
+
+        <!-- Filter -->
+
+        <Spinner
+            android:id="@+id/spinnerFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Task Heading -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Tasks"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:layout_marginTop="4dp" />
+
+        <!-- Task Count -->
+
+        <TextView
+            android:id="@+id/tvTaskCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tasks: 0"
+            android:textSize="13sp"
+            android:textColor="@color/secondary_text"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Task List -->
 
         <LinearLayout
             android:id="@+id/taskContainer"
@@ -257,6 +256,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" />
 
-    </ScrollView>
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
